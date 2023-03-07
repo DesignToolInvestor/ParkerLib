@@ -19,7 +19,7 @@
 #include "MappedFile.h"
 #include "MapTest.h"
 #include "TestHelper.h"
-#include "FileSys.h"
+#include "FileName.h"
 #include "DateForm.h"
 
 using namespace std;
@@ -76,7 +76,7 @@ void ReportCreateOsByte(const ParamConstT& param) {
   TickCountT ticks = ReadTicks() - start;
   float seconds = TicksToSecs(ticks);
   
-  Report("Creating File, OS Medeated, One Byte at a Time", seconds, param);
+  Report("Creating File, OS Mediated, One Byte at a Time", seconds, param);
   AppendLog(param, seconds, "OsWriteByte.log");
 } // ReportCreateOsByte
 
@@ -86,7 +86,7 @@ void ReportReadOsByte(const ParamConstT& param) {
   TickCountT ticks = ReadTicks() - start;
   float seconds = TicksToSecs(ticks);
 
-  Report("Reading File, OS Medeated, One Byte at a Time", seconds, param);
+  Report("Reading File, OS Mediated, One Byte at a Time", seconds, param);
   AppendLog(param, seconds, "OsReadByte.log");
 } // ReportReadOsByte
 
