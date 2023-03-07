@@ -1,0 +1,12 @@
+Key for log files
+
+BuildConf:
+	D0 : Standard debug
+	R0 : Standard release.  This is optimization level 2.
+
+Run Envionments:
+	W0 : Cokie's MiddleSchool Machine.  Winchester Black Disk.  
+	W1 : Cokie's MiddleSchool Machine.  SSD
+
+Cokie's Midleschool Machine:
+	Windows 10, 64Bit, CPU = i5-2500K, 3.3 GHz, need northbridge, memory speed, and double check SATA speed (may have to take it apart to figure out, no logo on motherboard).

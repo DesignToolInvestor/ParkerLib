@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="FileSys.cpp" />
+    <ClCompile Include="MapTest.cpp" />
+    <ClCompile Include="Splice.cpp" />
+    <ClCompile Include="TestHelper.cpp" />
+    <ClCompile Include="Timmer.cpp" />
+    <ClCompile Include="DateForm.cpp">
+      <Filter>Module Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MappedFile.cpp">
+      <Filter>Module Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArgPass.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CArray.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="DateForm.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSys.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MappedFile.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MapTest.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Splice.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Timmer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TestHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{55605ed0-bfb4-4210-8204-99750b40f875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Module Source">
+      <UniqueIdentifier>{5c9c02db-5ebd-4085-ba30-c1096b379846}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+  </ItemGroup>
+</Project>
