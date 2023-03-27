@@ -7,20 +7,29 @@
 
 #pragma once
 
-#include <windows.h>
-#include "DateForm.h"
+// Modern C++
+#include <cstddef>
+#include <cstdint>
 
+// Doesn't work with less than the full windows.h ... should but is a windows bug
+#include <windows.h>
+
+// ************************************
+typedef uint64_t FileSizeT;
+
+// ****************************
+// ToDo:  change to use strings instead of c-strings
 class MappedFileT {
 public:
   // This is read-only for a file that already exists
   MappedFileT(const char* fileName);
 
   // This creates a new file, deleting anything that already exists.
-  MappedFileT(const char* fileName, SizeT size);
+  MappedFileT(const char* fileName, FileSizeT size);
 
   ~MappedFileT();
 
-  inline BYTE operator[] (int index) const
+  inline std::byte operator[] (int index) const
     { return addr[index]; }
 
   inline void* operator() () const
@@ -29,5 +38,8 @@ public:
  protected:
   HANDLE fileHand;
   HANDLE memMap;
-  BYTE* addr;
+  std::byte* addr;
 }; // MappedFileT
+
+// include code body
+#include "MappedFile.body.h"
