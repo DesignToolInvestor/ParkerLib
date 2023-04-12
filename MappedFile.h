@@ -3,6 +3,11 @@
 
   When this class is opened it maps a file to memory.  When it is deleted it flushes any changes 
   back to the disk, unmaps the file, and closes the file.
+
+  Two types are defined that are redundant with C++ standard definitions FileSizeT and ByteT.  This
+  was not needed when only compiling in visual studio for a Windows 64 machine, but was the only
+  simple solution for getting portability to the Cuda compiler.  Sometimes size_t was 32 bits and
+  std::byte is not defined.
 */
 
 #pragma once
@@ -16,6 +21,7 @@
 
 // ************************************
 typedef uint64_t FileSizeT;
+typedef uint8_t ByteT;
 
 // ****************************
 // ToDo:  change to use strings instead of c-strings
@@ -29,7 +35,7 @@ public:
 
   ~MappedFileT();
 
-  inline std::byte operator[] (int index) const
+  inline ByteT operator[] (int index) const
     { return addr[index]; }
 
   inline void* operator() () const
@@ -38,7 +44,7 @@ public:
  protected:
   HANDLE fileHand;
   HANDLE memMap;
-  std::byte* addr;
+  ByteT* addr;
 }; // MappedFileT
 
 // include code body

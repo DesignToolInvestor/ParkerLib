@@ -2,7 +2,7 @@
   M a p p e d F i l e . i n c . h
 */
 
-// ToDo:  Why is this required ???
+// ToDo:  Why is this required?  Seems like a windows bug?
 #include <windows.h>
 
 #include <cassert>
@@ -24,7 +24,7 @@ MappedFileT::MappedFileT(const char* fileName) {
   this->memMap = CreateFileMappingA(fileHand, NULL, PAGE_READONLY, 0,0, NULL);
   assert(this->memMap != NULL);
 
-  this->addr = (std::byte*) MapViewOfFile(memMap, FILE_MAP_READ, 0,0, 0);
+  this->addr = (ByteT*) MapViewOfFile(memMap, FILE_MAP_READ, 0,0, 0);
   assert(this->addr != NULL);
 } // MappedFileT(char*)
 
@@ -52,7 +52,7 @@ MappedFileT::MappedFileT(const char* fileName, FileSizeT size) {
     abort();
   }
 
-  this->addr = (std::byte*) MapViewOfFile(memMap, FILE_MAP_WRITE, 0,0, 0);
+  this->addr = (ByteT*) MapViewOfFile(memMap, FILE_MAP_WRITE, 0,0, 0);
   if (addr == NULL) {
     DWORD errNum = GetLastError();
     abort();
