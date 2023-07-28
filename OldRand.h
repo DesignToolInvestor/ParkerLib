@@ -12,7 +12,7 @@
 unsigned RandTurboPascal(unsigned seed)
 {
   const unsigned A = 134'775'813;
-  const unsigned C = 1;
+  const unsigned B = 1;
 
-  return (A * seed + C);
+  return (A * seed + B);
 }
