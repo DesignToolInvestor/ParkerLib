@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ParkerLib.cpp" />
+    <ClCompile Include="Timer.build.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MappedFile.body.h" />
     <ClInclude Include="MappedFile.h" />
     <ClInclude Include="OldRand.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
