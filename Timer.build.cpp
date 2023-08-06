@@ -1,8 +1,8 @@
 /*
-  T i m m e r . c p p
+  T i m e r . c p p
 */
 
-#include "Timmer.h"
+#include "Timer.h"
 
 #include <windows.h>
 #include <cassert>
